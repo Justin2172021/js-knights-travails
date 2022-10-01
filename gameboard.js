@@ -1,7 +1,7 @@
  
 // Create the chess board module
 const gameBoard = () => {
-    
+
     // Instantiate variables and create chessboard table
     const defaultStartLocation = [0,0];
     const coordArray = [];
@@ -50,5 +50,12 @@ const gameBoard = () => {
     
     document.body.appendChild(chessTable);
 };
+
+const resetBoard = (function () {
+    const resetButton = document.querySelector(".clear-board-button");
+    resetButton.addEventListener("click", function () {
+        location.reload();
+    });
+})();
 
 export { gameBoard };
